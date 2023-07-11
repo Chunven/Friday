@@ -1,20 +1,13 @@
 <template>
   <div>
-    <v-hover v-slot:default="{ hover }" open-delay="50">
+    <v-hover v-slot:default="{ hover }" open-delay="100">
       <v-card
-        :elevation="hover ? 12 : 0"
+        :elevation="hover ? 16 : 0"
         outlined
-        class="product-border  secondary"
+        class="product-border secondary"
+        @click="functiona_a()"
       >
-        <v-img
-          class="primary--text align-end"
-          max-width="250"
-          :src="require('~/assets/img/pic1.jpg')"
-        >
-          <!-- <v-card-title class="font-weight-meduim primary--text"
-            >ກະເປົາເດີນທາງ</v-card-title
-          > -->
-        </v-img>
+        <v-img max-width="250" :src="require('~/assets/img/pic1.jpg')"> </v-img>
 
         <v-card-text class="text-start">
           <div class="font-weight-meduim primary--text">

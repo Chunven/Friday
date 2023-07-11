@@ -13,8 +13,8 @@
         prepend-inner-icon="mdi-magnify"
         dense
         outlined
-        label="ຄົ້ນຫາຂໍ້ມູນ"
-        placeholder="ຄົ້ນຫາຂໍ້ມູນ"
+        label="ຄົ້ນຫາ"
+        placeholder="ຄົ້ນຫາ"
         solo-inverted
       />
       <v-spacer />
@@ -51,43 +51,37 @@
       <Nuxt class="py-2 px-3" />
     </v-main>
 
-    <v-navigation-drawer app right clipped width="500">
-      <v-card class="pa-2">
-        <v-simple-table fixed-header height="550px">
-          <template v-slot:default>
-            <thead>
-              <tr>
-                <th class="text-left primary--text secondary">Product Name</th>
-                <th class="text-left primary--text secondary">Quantity</th>
-                <th class="text-left primary--text secondary">Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="item in productItems" :key="item.name">
-                <td class="font-weight-medium">{{ item.name }}</td>
-                <td class="font-weight-medium">{{ item.qty }}</td>
-                <td class="font-weight-medium">{{ item.price }}</td>
-              </tr>
-            </tbody>
-          </template>
-        </v-simple-table>
-      </v-card>
-
-      <v-card class="pa-2 mt-1">
-        <v-divider class="mx-4 primary"></v-divider>
-        <v-list-item class="">
-          <h2>ລວມລາຄາ:</h2>
-          <v-spacer></v-spacer>
-          <h2>560000 LAK</h2>
-        </v-list-item>
-
-        <v-divider class="mx-4 primary"></v-divider>
-        <v-card-actions>
-          <v-btn color="primary" block large>
-            <v-icon left> mdi-cash </v-icon> ຊຳລະເງິນ
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+    <v-navigation-drawer app right clipped width="450">
+      <v-simple-table fixed-header height="600">
+        <template v-slot:default>
+          <thead>
+            <tr>
+              <th class="text-left primary--text secondary">Product Name</th>
+              <th class="text-left primary--text secondary">Quantity</th>
+              <th class="text-left primary--text secondary">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="item in productItems" :key="item.name">
+              <td class="font-weight-medium">{{ item.name }}</td>
+              <td class="font-weight-medium">{{ item.qty }}</td>
+              <td class="font-weight-medium">{{ item.price }}</td>
+            </tr>
+          </tbody>
+        </template>
+      </v-simple-table>
+      <v-divider class="mx-4 primary"></v-divider>
+      <v-list-item class="">
+        <h2>ລວມລາຄາ:</h2>
+        <v-spacer></v-spacer>
+        <h2>560000 LAK</h2>
+      </v-list-item>
+      <v-divider class="mx-4 primary"></v-divider>
+      <v-card-actions>
+        <v-btn color="primary" block large > 
+          <v-icon size="25" left> mdi-cash-100 </v-icon> ຊຳລະເງິນ
+        </v-btn>
+      </v-card-actions>
     </v-navigation-drawer>
   </v-app>
 </template>
